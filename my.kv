@@ -1,0 +1,117 @@
+<Button>:
+    background_color: 1,1,1,1
+<MyGrid>:
+
+
+
+    GridLayout:
+        size: root.width , root.height
+        rows:2
+        spacing:0
+        GridLayout:
+            rows:3
+            cols:4
+
+
+
+            GridLayout:
+                cols:1
+                Label:
+                    text: "Side A (BC)"
+                TextInput:
+                    id:box_a
+                    multiline: False
+            Button:
+                id: btn_a
+                text: "Find A"
+
+                on_press:
+                    app.side_a()
+
+
+
+
+            GridLayout:
+                cols:1
+                Label:
+                    text: "Angle A"
+                    multiline: False
+                TextInput:
+                    id: box_angle_a
+                    multiline: False
+            Button:
+                id: btn_angle_a
+                text: "Find Angel A"
+
+                on_press:
+                    app.calc_a()
+
+
+
+            GridLayout:
+                cols:1
+                Label:
+                    text: "Side B (AC)"
+                TextInput:
+                    id:box_b
+                    multiline: False
+            Button:
+                id: btn_b
+                text: "Find B"
+
+                on_press:
+                    app.side_b()
+
+
+            GridLayout:
+                cols:1
+                Label:
+                    text: "Angle B"
+                TextInput:
+                    id:box_angle_b
+                    multiline: False
+            Button:
+                id: btn_angle_b
+                text: "Find Angel B"
+
+                on_press:
+                    app.calc_b()
+
+            GridLayout:
+                cols:1
+                Label:
+                    text: "Side C (AB)"
+                TextInput:
+                    id:box_c
+                    multiline: False
+            Button:
+                id: btn_c
+                text: "Find C"
+
+                on_press:
+                    app.side_c()
+
+
+            GridLayout:
+                cols:1
+                Label:
+                    text: "Angle C"
+                TextInput:
+                    id:box_angle_c
+                    multiline: False
+            Button:
+                text: "Find Angel C"
+
+                on_press:
+                    app.calc_c()
+
+
+
+        Label:
+            id: label
+            text: ""
+            color: 0,1,0,1
+            font_size: 15
+            text_size: self.size
+            halign: 'left'
+            valign: 'top'
