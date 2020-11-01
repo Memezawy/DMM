@@ -27,7 +27,8 @@ def cos(sota, s1, s2, letter):
 	cos = ((s1 ** 2) + (s2 ** 2) - (sota ** 2)) / (2 * s1 * s2)
 	answer_a = decdeg2dms(math.degrees(math.acos(cos)))
 	return f"""{letter} = {answer_a}
-{letter} in Decimal = {np.round(math.degrees(math.acos(cos)), 2)} """
+{letter} in Decimal = {np.round(math.degrees(math.acos(cos)), 2)}
+"""
 
 
 def area_of_tri(side1, side2, inc_angle, label):
@@ -37,7 +38,8 @@ def area_of_tri(side1, side2, inc_angle, label):
 		label.text = f"""Area = {np.round(area, 2)}"""
 	else:
 		label.text = f"""{label.text}
-Area = {np.round(area, 2)}"""
+Area = {np.round(area, 2)}
+"""
 
 
 def decdeg2dms(dd):
@@ -56,7 +58,8 @@ def cos_fun(label, sota, s1, s2, letter):
 			label.text = f"""{answer}"""
 		else:
 			label.text = f"""{label.text}
-{answer}"""
+{answer}
+"""
 	else:
 		value("Missing Values", "Please Enter All 3 Sides")
 
@@ -68,7 +71,8 @@ def side_fun(label, aots, s1, s2, letter):
 			label.text = f"""Side {letter} = {np.round(answer)}"""
 		else:
 			label.text = f"""{label.text}
-Side {letter} = {np.round(answer)}"""
+Side {letter} = {np.round(answer)}
+"""
 	else:
 		value("Missing Values", "One or more required value is missing")
 
